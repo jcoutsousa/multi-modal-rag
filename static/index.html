@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-RAG API UI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-RAG API</h1>
+        <div class="upload-section">
+            <h2>Upload PDF</h2>
+            <input type="file" id="pdfFile" accept=".pdf">
+            <button onclick="uploadPDF()">Upload</button>
+            <div id="uploadMessage"></div>  <!-- New message area -->
+        </div>
+        <div class="query-section">
+            <h2>Query</h2>
+            <textarea id="queryInput" placeholder="Enter your question here"></textarea>
+            <button onclick="submitQuery()">Submit Query</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
