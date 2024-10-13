@@ -110,11 +110,11 @@ def img_prompt_func(data_dict):
             }
             messages.append(image_message)
 
-    # Adding the text for analysis
+    # Adding the text for reserachers
     text_message = {
         "type": "text",
         "text": (
-            "You are financial analyst tasking with providing investment advice.\n"
+            "You are an assistant tasking with providing feedback to researchers.\n"
             "You will be given a mixed of text, tables, and image(s) usually of charts or graphs.\n"
             "Use this information to provide feedback related to the user question. \n"
             f"User-provided question: {data_dict['question']}\n\n"
@@ -151,8 +151,8 @@ def multi_modal_rag_chain(retriever):
 
 if __name__ == "__main__":
     # File path
-    fpath = "/Users/joanacsousa/Downloads/"
-    fname = "diagnostics-14-02273.pdf"
+    fpath = "path/to/your/pdf/directory"
+    fname = "name_of_the_pdf_file.pdf"
 
     # Get elements
     raw_pdf_elements = extract_pdf_elements(fpath, fname)
